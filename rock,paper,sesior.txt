@@ -1,0 +1,126 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class rockpaper {
+    public static void main(String[] args) 
+    {
+        int i,k;
+        int user;
+        int comp=0;
+        int userpoient=0;
+        int comppoient=0;
+        // display ....
+       System.out.println("0 : rock");
+       System.out.println("1 : paper");
+       System.out.println("0 : sesior");
+
+       // input from user ...
+       for ( k = 0; k < 3; k++) 
+       {
+       System.out.println("enter the value :");
+       Scanner j=new Scanner(System.in);
+       user=j.nextInt();
+        Random ran=new Random();
+
+
+       // for loop ...
+        for ( i = 0; i <3; i++) 
+        {
+            comp = ran.nextInt(3);
+        }
+        System.out.println(comp);
+
+        // condition for ...
+        
+         
+             
+            
+        
+        if (user==0 && comp==2)
+        {
+            System.out.println("rock kill sesor\n user win!");
+            userpoient++;
+            System.out.println("user poient is :"+userpoient);
+            
+        }
+       else if (user==2 && comp==0)
+        {
+            System.out.println("rock kill sesor\n comp win!");
+            comppoient++;
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else if (user==0 && comp==0)
+        {
+            System.out.println("none!");
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else if (user==1 && comp==0)
+        {
+            System.out.println("paper kill rock\n user win!");
+            userpoient++;
+            System.out.println("user poient is :"+userpoient);
+            System.out.println("computer poient is :"+comppoient);
+        }
+        else if (user==0 && comp==1)
+        {
+            System.out.println("paper  kill rock\n comp win!");
+            comppoient++;
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else if (user==1 && comp==1)
+        {
+            System.out.println("none!");
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else if (user==2 && comp==1)
+        {
+            System.out.println("sesior kill paper\n user win!");
+            userpoient++;
+            System.out.println("user poient is :"+userpoient);
+            System.out.println("computer poient is :"+comppoient);
+        }
+        else if (user==1 && comp==2)
+        {
+            System.out.println("sesior kill paper\n comp win!");
+            comppoient++;
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else if (user==2 && comp==2)
+        {
+            System.out.println("none!");
+            System.out.println("computer poient is :"+comppoient);
+            System.out.println("user poient is :"+userpoient);
+        }
+        else 
+        {
+            System.out.println("you enterd wrong keyword");
+        }
+      }
+      if (userpoient>comppoient) 
+      {
+          System.out.println("congratulation you won the game !");
+          
+      }
+      if (userpoient<comppoient) 
+      {
+          System.out.println("better luck for next time you lose the game !");
+          
+      }
+      if (userpoient==comppoient) 
+      {
+          System.out.println("game tie !");
+          
+      }
+      
+      
+    
+    }
+
+    
+}
+
