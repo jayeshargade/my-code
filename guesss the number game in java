@@ -1,0 +1,67 @@
+//import the package wich is verry usefull 
+import java.util.Random;
+import java.util.*;
+//creating the class outside the main class
+class game
+{
+    private int number;
+    //creating the canstructor for generate the randam number
+    public game()
+    {
+        Random random =new Random();
+        number=random.nextInt(10)+1;
+
+    }
+
+    public int  getnumber()
+    {
+        return number;
+    }
+    
+}
+// creating the main classs
+
+public class guess_the_numbers 
+{
+    public static void main(String[] args) 
+    {
+        game g=new game();
+        int n=0;
+        int count=0;
+        
+        Scanner sc=new Scanner(System.in);
+        
+        // creating the for loop for replying the one function 
+
+        for (int i = 0; i<10; i++) 
+        {
+            System.out.println("enter the number between 0-10");
+            n=sc.nextInt();
+            //applying the if else function here 
+            if (n==g.getnumber()) 
+            {
+                System.out.println("congratulations your guessing number is carrect!");
+                count++;
+                System.out.println("score ="+count);
+            }
+            if (n==g.getnumber()) 
+            break;    
+            
+           if (n<g.getnumber()) 
+           {
+               System.out.println("your number is less than guessing number");
+               count++;
+                System.out.println("score ="+count);
+               
+           }
+           if (n>g.getnumber()) 
+           {
+               System.out.println("your number is greater than guessing number");
+               count++;
+                System.out.println("score ="+count);
+               
+            }
+        }
+    }
+}
+
